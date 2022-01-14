@@ -67,22 +67,4 @@ Version :
   서버에서 받은 데이터들 ( Model list )을 List화 하여 observable, computed로 설정, 데이터를 관리하는데<br>
   이게 맞는건지... ( State가 변경될때마다 화면에 정상적으로 비동기 변경되긴 함.. )<br>
   
- 
-  for ( i=0; i<obj.length; i++ ) {<br>
-    for ( var key in obj[i] ) {<br>
-      const model = new Model();<br>
-      model[key] = obj[i][key]<br>
-      objList.pust(model);<br>
-    }<br>
-  }<br>
-  
-  
-  makeObservable(this, {<br>
-    objList: observable,<br>
-    getObjList: computed,<br>
-  
-  });<br>
-  
-  getObjList 사용하면 정상적으로 observer 관리가 되긴하는데... 부하가 없으려나..<br>
-
 ﻿
